@@ -1,0 +1,61 @@
+{
+  "testimonials_examples": [
+    {
+      "name": "Sophie Martin",
+      "role": "Élève en Terminale S",
+      "content": "Grâce aux cours de M. Bassa, j'ai progressé de 10 à 16 en mathématiques en seulement 3 mois. Sa méthode est claire et il sait parfaitement adapter ses explications à mon niveau.",
+      "rating": 5
+    },
+    {
+      "name": "Parent d'élève",
+      "role": "Mère d'Emma",
+      "content": "Mon fils était en grande difficulté. Après quelques semaines, il a retrouvé confiance et ses notes se sont nettement améliorées.",
+      "rating": 5
+    }
+  ],
+  "resources_video_examples": [
+    {
+      "title": "Les fonctions exponentielles",
+      "description": "Comprendre les propriétés et applications des fonctions exponentielles",
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=VOTRE_ID_VIDEO",
+      "category": "Mathématiques",
+      "level": "Lycée"
+    },
+    {
+      "title": "La cinématique en physique",
+      "description": "Introduction au mouvement : position, vitesse, accélération",
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=VOTRE_ID_VIDEO",
+      "category": "Physique",
+      "level": "Lycée"
+    }
+  ],
+  "resources_pdf_examples": [
+    {
+      "title": "Fiche de révision : Trigonométrie",
+      "description": "Toutes les formules essentielles et exercices types",
+      "type": "pdf",
+      "url": "/api/files/votre_fichier.pdf",
+      "category": "Mathématiques",
+      "level": "Collège"
+    },
+    {
+      "title": "Exercices corrigés : Électricité",
+      "description": "50 exercices avec corrections détaillées",
+      "type": "pdf",
+      "url": "/api/files/votre_fichier.pdf",
+      "category": "Physique",
+      "level": "Collège"
+    }
+  ],
+  "api_commands": {
+    "add_testimonial": "curl -X POST https://tutoringsite.preview.emergentagent.com/api/testimonials -H 'Content-Type: application/json' -d '{\"name\": \"Nom\", \"role\": \"Rôle\", \"content\": \"Témoignage...\", \"rating\": 5}'",
+    "add_video": "curl -X POST https://tutoringsite.preview.emergentagent.com/api/resources -H 'Content-Type: application/json' -d '{\"title\": \"Titre\", \"description\": \"Description\", \"type\": \"video\", \"url\": \"URL_YOUTUBE\", \"category\": \"Mathématiques\", \"level\": \"Lycée\"}'" ,
+    "add_pdf": "curl -X POST https://tutoringsite.preview.emergentagent.com/api/resources -H 'Content-Type: application/json' -d '{\"title\": \"Titre\", \"description\": \"Description\", \"type\": \"pdf\", \"url\": \"/api/files/fichier.pdf\", \"category\": \"Physique\", \"level\": \"Collège\"}'" ,
+    "upload_pdf": "curl -X POST https://tutoringsite.preview.emergentagent.com/api/upload -F 'file=@chemin/vers/votre/fichier.pdf'",
+    "get_all_testimonials": "curl https://tutoringsite.preview.emergentagent.com/api/testimonials",
+    "get_all_resources": "curl https://tutoringsite.preview.emergentagent.com/api/resources",
+    "get_contact_messages": "curl https://tutoringsite.preview.emergentagent.com/api/contact"
+  }
+}
