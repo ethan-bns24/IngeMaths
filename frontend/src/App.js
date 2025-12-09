@@ -82,49 +82,56 @@ function App() {
   };
 
   const pricingPlans = [
+    // 1. FORMULE EXCELLENCE ANNUELLE (Nouveau produit phare)
     {
-      title: 'Cours Individuel',
+      title: 'Formule Excellence Annuelle',
+      price: '199€',
+      duration: '/ mois (sur 10 mois)',
+      features: [
+        '1 Cours Collectif (Samedi) par semaine',
+        '2 Stages Intensifs de 5 jours inclus (Toussaint & Février)',
+        'Accès illimité à toutes les fiches et annales',
+        'Bilan personnalisé trimestriel'
+      ],
+      popular: true // Pour le mettre en évidence
+    },
+    
+    // 2. COURS HEBDOMADAIRES (Anciens cours individuels adaptés)
+    {
+      title: 'Soutien Hebdomadaire',
       price: '35€',
       duration: '/ heure',
       features: [
-        'Cours personnalisé à domicile',
-        'Suivi individualisé',
+        'Cours personnalisé à domicile ou en visio',
+        'Suivi individualisé des lacunes',
         'Support entre les cours',
         'Fiches de révision'
       ]
     },
+    
+    // 3. STAGES INTENSIFS (Nouveaux forfaits ponctuels)
     {
-      title: 'Cours en Visio',
-      price: '30€',
-      duration: '/ heure',
+      title: 'Stage Intensif Vacances',
+      price: '350€',
+      duration: '/ stage de 5 jours',
       features: [
-        'Cours en ligne interactif',
-        'Horaires flexibles',
-        'Partage d\'écran et tableau',
-        'Enregistrement disponible'
-      ],
-      popular: true
+        '5 jours consécutifs de révision ciblée',
+        'Préparation aux examens (Bac/Brevet)',
+        'Méthodologie d\'examen',
+        'Ouvert aux élèves extérieurs'
+      ]
     },
+    
+    // 4. PACK D'HEURES (Gardé et adapté si nécessaire)
     {
       title: 'Pack 10 heures',
       price: '320€',
       duration: 'au lieu de 350€',
       features: [
-        '10 heures de cours',
+        '10 heures de cours (Présentiel/Visio)',
         'Économie de 30€',
         'Validité 3 mois',
-        'Mix présentiel/visio'
-      ]
-    },
-    {
-      title: 'Préparation Examens',
-      price: '40€',
-      duration: '/ heure',
-      features: [
-        'Spécial Bac/Brevet',
-        'Annales corrigées',
-        'Méthodologie d\'examen',
-        'Stage intensif possible'
+        'Idéal pour un rattrapage ciblé'
       ]
     }
   ];
@@ -182,7 +189,7 @@ function App() {
             <span>Professeur Expérimenté</span>
           </div>
           <h1 className="hero-title">
-            Réussissez en <span className="gradient-text">Maths & Physique</span>
+            Réussissezer en <span className="gradient-text">Maths & Physique</span>
           </h1>
           <p className="hero-subtitle">
             Cours particuliers du collège à la prépa • Pédagogie adaptée • Résultats garantis
